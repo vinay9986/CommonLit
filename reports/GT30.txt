@@ -1,0 +1,58 @@
+.30 >
+handle associations using PCA or represent them as is
+
+flesch
+smog
+rix
+dale_chall
+perposition
+nominalization
+spacy_2
+spacy_29
+spacy_30
+spacy_46
+spacy_50
+spacy_68
+spacy_69
+spacy_72
+spacy_101
+spacy_107
+spacy_110
+spacy_114
+spacy_122
+spacy_134
+spacy_140
+spacy_146
+spacy_149
+spacy_151
+spacy_182
+spacy_240
+spacy_249
+spacy_251
+spacy_252
+spacy_254
+spacy_264
+spacy_266
+spacy_269
+IN
+PRP
+VBD
+num_char
+avg_len_word
+subdomain
+domain
+
+features who did not report target value in first analysis
+chars_per_word
+syll_per_word
+coleman_liau
+spacy_76
+
+features selection in round 2 after step 6: cutoff close to 30 (least 27)
+spacy_9
+pronoun
+license_version
+spacy_28
+spacy_103
+spacy_196
+-- these feaatures were analysed with LT30 group and no matches were found, hence analysing them with GT30 group

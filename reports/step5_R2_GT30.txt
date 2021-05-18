@@ -1,0 +1,63 @@
+===========================================
+R2 of features GT30
+===========================================
+PCA1 - IN retained its score by 182 lost 10 points
+spacy_182
+IN
+
+spacy_182 -> seprate
+
+PCA2 - loosing information, if every other PCA goes fine then we might get to retain the them as is
+nominalization
+spacy_140
+
+PCA3 - increase the score by one point, and removes correlation
+coleman_liau
+smog
+
+PCA5: can nominalization be merged with PCA3
+	- no change to PCA3 score
+
+PCA6: can CL and 140 be together?
+	- no, we lose information
+
+PCA7: can N, IN and 182 be together? or onlt IN and N maybe?
+	- 7_0, looks like they work well score 47, 27
+	- 7_1, yes this works score 47, 26 and we can keep 182
+
+PCA4: add either spacy_9, VBD or both and select the best result
+	- only pro and PRP is bad
+	- pro, prp and vbd reaches prp max sccore
+	- pro, prp and spacy_9 is bad
+VBD
+PRP
+
+preposition -> if PCA1 has no improvement then drop preposition
+			- conclusion is to drop preposition
+
+spacy_9 -> drop
+pronoun -> drop
+
+===========================================
+Conclusion
+===========================================
+pronoun -> group with spacy_4 (as per step5_LT30 analysis)
+
+PCA1
+IN
+nominalization
+
+PCA2
+coleman_liau
+smog
+
+PCA3
+VBD
+PRP
+
+spacy_182 -> seprate
+spacy_140 -> seprate
+subdomain -> seprate
+
+preposition -> drop
+spacy_9 -> drop

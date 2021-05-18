@@ -1,0 +1,201 @@
+
+===========================================
+report_0
+===========================================
+PCA1 score is bad, but have to combine to avoid correlation 1_0 f and 28, 1_1 28 and 9
+flesch
+spacy_28
+
+PCA2 - no improvement, have to combine to avoide correlation
+rix
+dale_chall
+
+PCA3: score increased to 45. 3_0 2, 29, N and P. 3_1 2, 29, N. 3_2 2 and 29
+spacy_2
+spacy_29
+
+smog -> next stage
+spacy_9 -> next stage
+nominalization -> next stage
+preposition -> next stage
+===========================================
+report_1
+===========================================
+PCA4 score increase from 33 to 37
+spacy_72
+spacy_101
+
+PCA5 score increase from 38 to 46
+spacy_68
+spacy_69
+spacy_76
+
+PCA6 score increase from 39 to 47
+spacy_30
+spacy_46
+spacy_103
+
+PCA7 score increase from 34 to 39
+spacy_50
+spacy_107
+
+===========================================
+report_2
+===========================================
+PCA8 - score increase to 46
+spacy_114
+spacy_134
+spacy_196
+
+PCA9 - score increase to 48
+spacy_110
+spacy_122
+spacy_151
+
+PCA10 with 140 the score is 54, max of 140
+	  without 140 the score increase from 36 to 41
+spacy_146
+spacy_149
+
+spacy_182 -> next round
+spacy_140 -> next round
+===========================================
+report_3
+===========================================
+PCA11 - with IN the score is 46 max of IN
+	  - without IN the score is 37 and 26
+spacy_252
+spacy_266
+
+PCA12: marginal increase
+spacy_251
+spacy_240
+
+PCA13 - with P the score is 31 from B and 32 for R
+	  - without P the score is 31 for B and 45 for R
+spacy_249
+spacy_264
+
+PCA14 score increase to 46 from 40
+spacy_269
+spacy_254
+
+IN -> next round
+pronoun -> next round
+===========================================
+report_4
+===========================================
+PCA15: replace SPW with ALW
+		- with both SPW and ALW: bettwe PCA and score of 45
+		- with SPW: bad PCA and score of 45
+		- with ALW: good PCA score of 45
+	Looks like CL is masking the result. lets move that feat out and have rest of them in one PCA
+		- CPW and ALW: score of 42
+		- CPW and SPW: score of 44, max of SPW
+		- CPW and NC: bad results 36
+		- All together: bad results , looks like CPW and NC do not mix
+		- NC and SPW: bad results
+		- NC and ALW: bad results. NC does not mix with any
+		- NC and CL: bad results
+		- ALW, CPW and SPW: score 42 R and 17 B - solution
+		- CL and ALW: 
+chars_per_word
+syll_per_word
+avg_len_word
+
+PCA16: score increase from 37 to 39 (can be seperated)
+PRP
+VBD
+
+coleman_liau -> next step
+num_char -> Drop. its very stubbern and does not mix with any other features
+domain -> Drop
+license_version -> Drop
+
+===========================================
+Next
+===========================================
+Repeate all the steps with the features identified for next round (given below)
+
+smog
+spacy_9
+nominalization
+preposition
+spacy_182
+spacy_140
+IN
+pronoun
+PRP
+VBD
+coleman_liau
+
+===========================================
+Conclusion
+===========================================
+PCA
+rix
+dale_chall
+
+PCA
+spacy_2
+spacy_29
+
+PCA
+spacy_72
+spacy_101
+
+PCA
+spacy_68
+spacy_69
+spacy_76
+
+PCA
+spacy_30
+spacy_46
+spacy_103
+
+PCA
+spacy_50
+spacy_107
+
+PCA
+spacy_114
+spacy_134
+spacy_196
+
+PCA
+spacy_110
+spacy_122
+spacy_151
+
+PCA
+spacy_146
+spacy_149
+
+PCA
+spacy_252
+spacy_266
+
+PCA
+spacy_251
+spacy_240
+
+PCA
+spacy_249
+spacy_264
+
+PCA
+spacy_269
+spacy_254
+
+PCA
+chars_per_word
+syll_per_word
+avg_len_word
+
+flesch -> seprate (because its correlation features are either merged or dropped)
+spacy_28 -> seprate (because its correlation features are either merged or dropped)
+
+num_char -> Drop
+domain -> Drop
+license_version -> Drop
