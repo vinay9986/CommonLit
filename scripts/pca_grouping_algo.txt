@@ -1,0 +1,14 @@
+# Sudo code for pca grouping
+# goal: transform weak features using PCA to boost their predicting power
+
+step 1 and 2: divide features into two groups 1. LT30 (predicting power greater than .20 but less than .30) and 2. GT30 (predicting power greater than .30 but less than .70)
+step 3 and 4: Sometimes features that are highly correlated to other features do not show their predicting power in the table (sweetviz only shows top 15 scores). In such cases we have to analyse those features seprately. The expected predicting power for such features are greater than 40 (hard limit at 37) not less than that and place them in GT30 list. All features that have predicting power between .37 and .30 are placed in LT30 list
+step 5: Analyse PCA groups using the correltaion table. Use small reports to decide on how to group. If a group cannot be determined then the feature group might be present in another report. analyze all the non grouped features in a seprate report and have at leat one feature from formed groups as a representator of that group
+step 6: Analyse PCA, transform the groups into PCA and see if the predicting power has increased. hint: the PCA will have good PCA components if the grouping is done well, but the same cannot be said about their predicting power
+
+How to group
+1. Look at the plots (sweetviz association plots)
+2. divide the features in small reports into wither +ve influencers or -ve influencers
+3. note down the hirarchy of correlation for all the features for example (A-1-5-B-U) where A is a feature who has highest correlation with feature 1 and then with feature 5 and so on..
+4. See if you can find groups (most commonly appearing features, something like finding motifs)
+
