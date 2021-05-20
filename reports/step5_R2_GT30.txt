@@ -43,15 +43,15 @@ Conclusion
 ===========================================
 pronoun -> group with spacy_4 (as per step5_LT30 analysis)
 
-PCA1
+PCA
 IN
 nominalization
 
-PCA2
+PCA
 coleman_liau
 smog
 
-PCA3
+PCA
 VBD
 PRP
 

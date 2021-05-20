@@ -1,0 +1,278 @@
+======================
+report_0
+======================
+PCA1 - 31, 19 => yes
+spacy_24
+spacy_10
+
+PCA2 - 24, 45 => yes
+gunning_fog
+lix
+words_per_sent
+
+##PCA3 - 24, 45
+gunning_fog
+lix
+words_per_sent
+spacy_24
+
+##PCA4 - 24, 45
+gunning_fog
+lix
+words_per_sent
+spacy_24
+spacy_10
+
+##PCA5 - 24, 45
+gunning_fog
+lix
+words_per_sent
+spacy_24
+spacy_10
+kincaid
+
+ari -> next round
+
+##PCA6 - 29, 13 (drop PCA)
+spacy_9
+spacy_20
+
+spacy_34 -> next round
+
+======================
+report_1
+======================
+##PCA7 - 31, 06
+spacy_133
+spacy_184
+
+##PCA8 - 39, 01
+spacy_139
+spacy_147
+spacy_133
+
+##PCA9 - 43, 01
+spacy_139
+spacy_147
+spacy_133
+spacy_67
+
+PCA10 - 44, 02 => yes
+spacy_139
+spacy_147
+spacy_133
+spacy_67
+spacy_156
+
+##PCA11 - 32, 08
+spacy_84
+spacy_162
+
+PCA12 - 40, 02 => yes
+spacy_84
+spacy_162
+spacy_155
+
+spacy_113 -> next round
+
+======================
+report_2
+======================
+##PCA13 - 36, 04
+spacy_208
+spacy_232
+
+##PCA14 - 40, 02
+spacy_208
+spacy_232
+spacy_262
+
+PCA15 - 43, 13 => yes
+spacy_208
+spacy_232
+spacy_262
+spacy_261
+
+spacy_206 -> next round
+spacy_214 -> next round
+spacy_253 -> next round
+
+PCA16 - 36, 01 => yes
+spacy_200
+spacy_263
+
+spacy_248 -> next round
+
+======================
+report_3
+======================
+##PCA17 - 23, 20
+spacy_298
+VB
+
+##PCA18 - 23, 17
+spacy_298
+VB
+WRB
+
+spacy_289 -> next round
+
+##PCA19 - 27, 19
+WDT
+JJ
+
+DT -> next round
+NN -> next round
+
+======================
+report_4
+======================
+PCA20 - 31, 19 => yes
+spacy_4
+pronoun
+
+##PCA21 - 31, 16
+exclaims
+questions
+pronoun
+
+periods -> next round
+
+PCA22 - 35, 6 => yes
+spacy_7
+spacy_27
+
+spacy_14 -> next round
+
+======================
+report_5
+======================
+##PCA23 - 39, 05
+spacy_103
+spacy_97
+
+##PCA24 - 36, 17
+spacy_103
+spacy_97
+spacy_159
+
+PCA25 - 39, 20 => yes
+spacy_103
+spacy_97
+spacy_159
+spacy_60
+
+spacy_38 -> next round
+spacy_43 -> next round
+spacy_148 -> next round
+
+PCA26 - 39, 03 => yes
+spacy_86
+spacy_105
+
+spacy_28 -> next round
+
+======================
+report_6
+======================
+PCA27 - 32, 04 => yes
+spacy_160
+spacy_203
+
+spacy_258 -> next round 
+
+PCA28 - 32, 18 => yes
+spacy_294
+spacy_196
+
+spacy_198 -> next round
+
+==========================================================
+ROUND 2
+==========================================================
+features considered
+ari
+spacy_34
+spacy_113
+spacy_206
+spacy_214
+spacy_253
+spacy_248
+spacy_289
+DT
+NN
+periods
+spacy_14
+spacy_38
+spacy_43
+spacy_28
+spacy_148
+spacy_258
+spacy_198
+
+##PCA1 - 28, 03
+NN
+DT
+
+##PCA2 - 28, 03
+NN
+DT
+spacy_248
+
+##PCA3 - 24, 25
+NN
+DT
+spacy_248
+ari
+
+##PCA4 - 33, 07
+spacy_289
+spacy_214
+
+PCA5 - 34, 07 => yes
+spacy_289
+spacy_214
+spacy_206
+
+##PCA6 - 35, 0
+spacy_38
+spacy_148
+
+PCA7 - 42, 8 => yes
+spacy_258
+spacy_14
+spacy_43
+
+PCA8 - 37, 8 => yes
+spacy_198
+spacy_28
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
