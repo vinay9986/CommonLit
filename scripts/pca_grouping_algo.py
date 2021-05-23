@@ -28,7 +28,9 @@ for index, i in enumerate(range(0, len(columns), 10)):
 
 #cell 3
 # input for step 5
+random.seed(3456789)
 columns = []
+random.shuffle(columns)
 
 for index, i in enumerate(range(0, len(columns), 10)):
     train_cols = columns[i:i+10]

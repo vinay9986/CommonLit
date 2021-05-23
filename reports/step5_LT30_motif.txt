@@ -1,7 +1,7 @@
 ======================
 report_0
 ======================
-PCA1 - 31, 19 => yes
+PCA1 - 31, 19
 spacy_24
 spacy_10
 
@@ -97,7 +97,7 @@ spacy_206 -> next round
 spacy_214 -> next round
 spacy_253 -> next round
 
-PCA16 - 36, 01 => yes
+PCA16 - 36, 01
 spacy_200
 spacy_263
 
@@ -127,7 +127,7 @@ NN -> next round
 ======================
 report_4
 ======================
-PCA20 - 31, 19 => yes
+PCA20 - 31, 19
 spacy_4
 pronoun
 
@@ -138,7 +138,7 @@ pronoun
 
 periods -> next round
 
-PCA22 - 35, 6 => yes
+PCA22 - 35, 6
 spacy_7
 spacy_27
 
@@ -175,20 +175,20 @@ spacy_28 -> next round
 ======================
 report_6
 ======================
-PCA27 - 32, 04 => yes
+PCA27 - 32, 04 
 spacy_160
 spacy_203
 
 spacy_258 -> next round 
 
-PCA28 - 32, 18 => yes
+PCA28 - 32, 18
 spacy_294
 spacy_196
 
 spacy_198 -> next round
 
 ==========================================================
-ROUND 2
+ROUND 2 (PCA drop out considered - No)
 ==========================================================
 features considered
 ari
@@ -229,12 +229,12 @@ ari
 spacy_289
 spacy_214
 
-PCA5 - 34, 07 => yes
+PCA5 - 34, 07 
 spacy_289
 spacy_214
 spacy_206
 
-##PCA6 - 35, 0
+PCA6 - 35, 0
 spacy_38
 spacy_148
 
@@ -243,12 +243,51 @@ spacy_258
 spacy_14
 spacy_43
 
-PCA8 - 37, 8 => yes
+PCA8 - 37, 8
 spacy_198
 spacy_28
 
+==========================================================
+Conclusion
+==========================================================
 
+PCA1 - 24, 45
+gunning_fog
+lix
+words_per_sent
 
+PCA2 - 44, 02
+spacy_139
+spacy_147
+spacy_133
+spacy_67
+spacy_156
+
+PCA3 - 40, 02
+spacy_84
+spacy_162
+spacy_155
+
+PCA4 - 43, 13
+spacy_208
+spacy_232
+spacy_262
+spacy_261
+
+PCA5 - 39, 20
+spacy_103
+spacy_97
+spacy_159
+spacy_60
+
+PCA6 - 39, 03
+spacy_86
+spacy_105
+
+PCA7 - 42, 8
+spacy_258
+spacy_14
+spacy_43
 
 
 

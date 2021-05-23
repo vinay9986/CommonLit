@@ -42,7 +42,7 @@ avg_len_word
 subdomain
 domain
 
-features who did not report target value in first analysis
+features who did not report target value in first analysis and were GT30
 chars_per_word
 syll_per_word
 coleman_liau
