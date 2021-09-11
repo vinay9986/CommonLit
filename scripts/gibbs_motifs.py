@@ -141,10 +141,9 @@ def getBestMotifsOfVaryingLenght(dnas):
             return_results.append(best_motif)
     return return_results
 
-def getPCAGroups(columns, lengths):
+def getPCAGroups(columns, l):
     return_result = []
-    for l in lengths:
-        dna_results, matrix_results = generateDNAString(columns, l)
-        for index, i in enumerate(dna_results):
-            return_result.extend(convertDNAToPCAGroup(dna_results[index][0], getBestMotifsOfVaryingLenght(i[1])))
+    dna_results, matrix_results = generateDNAString(columns, l)
+    for index, i in enumerate(dna_results):
+        return_result.extend(convertDNAToPCAGroup(dna_results[index][0], getBestMotifsOfVaryingLenght(i[1])))
     return return_result

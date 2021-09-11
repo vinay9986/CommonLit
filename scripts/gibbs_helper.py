@@ -1,4 +1,7 @@
 import random
+import multiprocessing as mp
+from functools import partial
+
 random.seed(83174236)
 
 class TwoWayDict(dict):
@@ -60,6 +63,18 @@ def generateDNAString(columns, n=5):
         dnas_list.append((column_key_map, dnas))
     return dnas_list, matrix_list
 
+def analyzePCAGroups(df, list_of_groups):
+    result_list = []
+    for group_num, groups in enumerate(list_of_groups):
+        for pca_num, group in enumerate(groups):
+            key = 'pca'+str(group_num)+str(pca_num)
+            pca_res, df = train_pca(df, group, key)
+            corr = max(round(abs(df[key+'_1'].corr(df['target'])), 4), round(abs(df[key+'_2'].corr(df['target'])), 4))
+            # .47 is 20% increase from .39 (max of filtering criteria .25 <= corr <= .40)
+            if corr >= .47:
+                result_list.append((key, group, corr))
+    return result_list
+
 # cell 2
 num_cols = list(train_feat.select_dtypes(exclude=['object']).columns)
 num_cols.remove('target')
@@ -82,11 +97,41 @@ print(len(boostable_neg_fe))
 # output of the above code is 43
 
 # cell 3
+# generate groups
+pool = mp.Pool(mp.cpu_count())
+print(mp.cpu_count())
+print("grouping features of pos for PCA")
 # divisors of 36
-pos_pca_groups = getPCAGroups(boostable_pos_fe, [4, 6, 9, 12, 18])
-# divisors of 40, because 43 is prime number
-neg_pca_groups = getPCAGroups(boostable_neg_fe, [4, 5, 8, 10, 20])
-print("groups created for analysis!")
+pos_iterable = [4, 6, 9, 12, 18]
+pos_func = partial(getPCAGroups, boostable_pos_fe)
+pos_pca_groups = pool.map(pos_func, pos_iterable)
+print("pos grouping done!")
+print()
+print("grouping features of neg for PCA")
+# divisors of 40 because 43 is prime number
+neg_iterable = [4, 5, 8, 10, 20]
+neg_func = partial(getPCAGroups, boostable_neg_fe)
+neg_pca_groups = pool.map(neg_func, neg_iterable)
+print("neg grouping done!")
+pool.close()
+pool.join()
 
 # cell 4
 # PCA analysis
+pos_groups_to_consider = analyzePCAGroups(train_feat, pos_pca_groups)
+print()
+print('='*30)
+for group in pos_groups_to_consider:
+    print(group[0], group[2])
+    print(group[1])
+print('='*30)
+print()
+
+neg_groups_to_consider = analyzePCAGroups(train_feat, neg_pca_groups)
+print()
+print('='*30)
+for group in neg_groups_to_consider:
+    print(group[0], group[2])
+    print(group[1])
+print('='*30)
+print()
